@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='https://cdn.rawgit.com/doximity/vital/master/releases/v1.0.1/stylesheets/vital.min.css' />
+    <link rel='stylesheet' href="/stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
+  </head>
+  <body>
+    <div class="row padded header">
+      <div class="col-1-4 logo">
+        <img alt="logo" />
+      </div>
+      <div class="col-3-4 top-menu">
+        <nav>
+          <ul class="menu">
+            <li><a class="welcome">Welcome <b>{{user.name}}</b></a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row content">
+      <div class="section">
+        <h1>{{pageTitle}}</h1>
+        {{{body}}}
+      </div>
+    </div>
+    <div class="row padded footer">
+    </div>
+  </body>
+</html>

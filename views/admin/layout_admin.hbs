@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link rel='stylesheet' href='https://cdn.rawgit.com/doximity/vital/master/releases/v1.0.1/stylesheets/vital.min.css' />
+    <link rel='stylesheet' href="/stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
+  </head>
+  <body>
+    <div class="row padded header">
+      <div class="col-1-4 logo">
+        <img alt="logo" />
+      </div>
+      <div class="col-3-4 top-menu">
+        {{> main_menu}}
+      </div>
+    </div>
+    {{#if user.registered}}
+      <div class="row padded content">
+        <div class="col-3-4">
+          <div class="row">
+            <h1>{{pageTitle}}</h1>
+          </div>
+          <div class="row">
+            {{{body}}}
+          </div>
+        </div>
+        <div class="col-1-4 right-menu">
+          <div class="section">
+            <a href="#">Login</a>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <div class="row padded content">
+        {{{body}}}
+      </div>
+    {{/if}}
+    <div class="row padded footer">
+    </div>
+  </body>
+</html>

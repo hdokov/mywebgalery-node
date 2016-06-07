@@ -1,0 +1,9 @@
+<nav>
+  <ul class="menu">
+    {{#if user.registered}}
+      <li><a href="/admin/logout">Logout</a></li>
+    {{else}}
+      <li><a href="/admin/login">Login</a></li>
+    {{/if}}
+  </ul>
+</nav>

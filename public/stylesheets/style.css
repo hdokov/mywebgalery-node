@@ -1,0 +1,6 @@
+ul.menu { float: right; }
+ul.menu li a:hover { background: transparent;}
+
+input {margin-bottom: 1em;}
+
+.error { color: #c00; padding-bottom: 1em; }
