@@ -10,6 +10,7 @@ var session = require('client-sessions');
 
 var routes = require('./routes/index');
 var admin = require('./routes/admin');
+var apps = require('./routes/apps');
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use(function(req, res, next) {
 
 app.use('/', routes);
 app.use('/admin', admin);
+app.use('/admin/apps', apps);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
