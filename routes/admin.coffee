@@ -10,8 +10,6 @@ checkLogin = (req, res, next) ->
   else
     res.redirect('/admin/login')
 
-console.log sessions
-
 router.get '/', [checkLogin, sessions.index]
 router.get '/login', sessions.new
 router.post '/login', sessions.create
